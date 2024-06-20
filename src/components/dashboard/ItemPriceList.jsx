@@ -12,7 +12,7 @@ const ItemPriceList = () => {
 
     return (
         <div className="flex flex-wrap gap-4 justify-center">
-            {(showAll ? orders?.slice(0, 4) : orders?.slice(0, 2)).map(order => (
+            {(showAll ? orders.slice(0, 4) : orders.slice(0, 2)).map(order => (
                 <div key={order.Order_ID} className="flex flex-col gap-4">
                     {order.Items.map(item => (
                         <ItemPriceCard

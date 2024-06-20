@@ -5,7 +5,7 @@ const OrderSummary = ({ orders }) => {
     const [orderCount, setOrderCount] = useState(orders.length);
     const customerSet = new Set();
 
-    orders.forEach(order => {
+    orders?.forEach(order => {
         customerSet.add(order.Customer_Name);
     });
 
