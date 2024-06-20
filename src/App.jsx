@@ -6,6 +6,8 @@ import './index.css';
 import Sidebar from './components/common/Sidebar';
 import Header from './components/common/Header';
 import Notification from './pages/Notification';
+import Footer from './components/common/Footer';
+import Settings from './pages/Settings';
 
 function App() {
   const [isCollapsed, setIsCollapsed] = useState(false);
@@ -18,16 +20,18 @@ function App() {
     <Router>
       <div className="flex flex-col min-h-screen">
         <Header toggleSidebar={toggleSidebar} />
-        <div className="flex flex-1 ">
+        <div className="flex">
           <Sidebar isCollapsed={isCollapsed} />
           <div className="flex-1 p-10 overflow-y-auto h-screen">
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/profile" element={<Profile />} />
               <Route path="/notification" element={<Notification />} />
+              <Route path="/settings" element={<Settings />} />
             </Routes>
           </div>
         </div>
+        <Footer />
       </div>
     </Router>
   );

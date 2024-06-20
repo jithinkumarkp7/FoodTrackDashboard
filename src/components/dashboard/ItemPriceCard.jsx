@@ -2,7 +2,7 @@ import React from 'react';
 
 const ItemPriceCard = ({ itemName, itemPrice }) => {
     return (
-        <div className="bg-white rounded-lg shadow-lg p-4 mb-4">
+        <div className="bg-white rounded-lg shadow-lg p-4">
             <h3 className="font-bold text-lg mb-2">{itemName}</h3>
             <div className='flex'>
                 <div className="w-1/2">

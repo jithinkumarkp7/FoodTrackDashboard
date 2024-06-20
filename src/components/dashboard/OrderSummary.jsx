@@ -14,31 +14,44 @@ const OrderSummary = ({ orders }) => {
         order.Items.reduce((subtotal, item) => subtotal + item.Total_Price, 0)
     ).reduce((total, subtotal) => total + subtotal, 0);
 
+    const styles = {
+        wrapper: 'bg-white shadow-md rounded-lg p-4 min-w-[200px] text-center',
+        icon: 'text-4xl text-gray-600 mb-2 mx-auto',
+        value: 'text-xl font-bold text-gray-800',
+        label: 'text-gray-600'
+    }
     return (
-        <div className="container  py-8">
-            <div className="flex flex-wrap mb-8 gap-5">
-                <div className="bg-white shadow-md rounded-lg p-4 text-center max-w-md mx-auto min-w-[200px]">
-                    <FaClipboardList className="text-4xl text-gray-600 mb-2 mx-auto" />
-                    <p className="text-xl font-bold text-gray-800">{orderCount}</p>
-                    <p className="text-gray-600"> Total Orders</p>
-                </div>
-                <div className="bg-white shadow-md rounded-lg p-4 text-center max-w-md mx-auto min-w-[200px]">
-                    <FaUser className="text-4xl text-gray-600 mb-2 mx-auto" />
-                    <p className="text-xl font-bold text-gray-800">{customerCount}</p>
-                    <p className="text-gray-600"> Total Customers</p>
-                </div>
-                <div className="bg-white shadow-md rounded-lg p-4 text-center max-w-md mx-auto min-w-[200px]">
-                    <FaMoneyBillWave className="text-4xl text-gray-600 mb-2 mx-auto" />
-                    <p className="text-xl font-bold text-gray-800">${totalPriceReceived.toFixed(2)}</p>
-                    <p className="text-gray-600">Total Received </p>
-                </div>
-                <div className="bg-white shadow-md rounded-lg p-4 text-center max-w-md mx-auto min-w-[200px]">
-                    <FaTrashRestoreAlt className="text-4xl text-gray-600 mb-2 mx-auto" />
-                    <p className="text-xl font-bold text-gray-800">{10}</p>
-                    <p className="text-gray-600">Vacant Tables</p>
-                </div>
+        <div className="flex flex-wrap gap-4 justify-start">
+            <div className={styles['wrapper']}>
+                <FaClipboardList className={styles['icon']} />
+                <p className={styles['value']}>{orderCount}</p>
+                <p className={styles['label']}> Total Orders</p>
             </div>
-
+            <div className={styles['wrapper']}>
+                <FaUser className={styles['icon']} />
+                <p className={styles['value']}>{customerCount}</p>
+                <p className={styles['label']}> Total Customers</p>
+            </div>
+            <div className={styles['wrapper']}>
+                <FaMoneyBillWave className={styles['icon']} />
+                <p className={styles['value']}>${totalPriceReceived.toFixed(2)}</p>
+                <p className={styles['label']}>Total Received </p>
+            </div>
+            <div className={styles['wrapper']}>
+                <FaTrashRestoreAlt className={styles['icon']} />
+                <p className={styles['value']}>{10}</p>
+                <p className={styles['label']}>Vacant Tables</p>
+            </div>
+            <div className={styles['wrapper']}>
+                <FaTrashRestoreAlt className={styles['icon']} />
+                <p className={styles['value']}>{10}</p>
+                <p className={styles['label']}>Sample data</p>
+            </div>
+            <div className={styles['wrapper']}>
+                <FaTrashRestoreAlt className={styles['icon']} />
+                <p className={styles['value']}>{10}</p>
+                <p className={styles['label']}>Sample data</p>
+            </div>
         </div>
     );
 };

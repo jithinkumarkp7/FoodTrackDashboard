@@ -10,30 +10,28 @@ const Home = () => {
   const orders = ORDER_DATA;
   return (
     <div className="container mx-auto flex flex-wrap mb-20">
-      <div className="tile flex-grow md:flex-grow-0 md:w-2/5 lg:w-2/8">
-        <h2 className="text-2xl font-bold mb-4">Overall Details</h2>
+      <div className="tile w-2/4">
+        <h2 className="text-2xl font-bold my-5">Overall Details</h2>
         <OrderSummary orders={orders} />
       </div>
-      <div className="tile flex-grow md:w-3/5 lg:w-6/8">
-        <h2 className="text-2xl font-bold mb-4">Today's Income, Expenses, and Other</h2>
-
+      <div className="tile w-2/4">
+        <h2 className="text-2xl font-bold my-5">Today's Income, Expenses, and Other</h2>
         <TodayChart />
       </div>
-
-      <div className="tile flex-grow md:flex-grow-0 mt-4 md:w-2/5 lg:w-2/8">
-        <h2 className="text-2xl font-bold mb-4">Price Details</h2>
+      <div className="tile w-2/5">
+        <h2 className="text-2xl font-bold my-5">Price Details</h2>
         <ItemPriceList />
       </div>
-      <div className="tile flex-grow md:w-3/5 mt-4 lg:w-6/8">
-        <h2 className="text-2xl font-bold mb-4">Recent orders</h2>
+      <div className="tile w-3/5">
+        <h2 className="text-2xl font-bold my-5">Recent orders</h2>
         <div className="flex flex-wrap">
           <ItemTable order={orders} />
         </div>
       </div>
-      <div className="tile w-full mt-6">
-        <h2 className="text-2xl font-bold mb-4">Daily Trending Menus</h2>
+      <div className="tile w-full">
+        <h2 className="text-2xl font-bold my-5">Daily Trending Menus</h2>
         <div className="flex flex-wrap gap-4">
-          {TRENDING_MENUS?.map((menu, index) => (
+          {TRENDING_MENUS?.map((menu) => (
             <TrendingMenuCard
               key={menu?.id}
               title={menu?.title}
@@ -44,7 +42,6 @@ const Home = () => {
           ))}
         </div>
       </div>
-
     </div>
 
   );

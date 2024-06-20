@@ -23,7 +23,7 @@ const TodayChart = () => {
         labels: ['Income', 'Expenses', 'Other'],
         datasets: [
             {
-                label: 'Today\'s Data',
+                label: 'Today Data',
                 data: [income, expenses, other],
                 backgroundColor: ['#68D391', '#FC8181', '#A0AEC0'],
             },

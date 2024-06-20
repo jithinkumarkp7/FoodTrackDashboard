@@ -616,6 +616,12 @@ export const TRENDING_MENUS = [
     },
     {
         id: 3,
+        title: "Breakfast Special",
+        description: "Delicious pancakes with fresh berries and syrup.",
+        imageSrc: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1DWjgECdmxa-Tr_3Xb9Va4Ogp1fb7v44ghA&s"
+    },
+    {
+        id: 4,
         title: "Dinner Delight",
         description: "Grilled salmon served with roasted vegetables.",
         imageSrc: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtBNG4k8JOq92tFO1MuDtIDP37RFB3y0g4Vw&s"

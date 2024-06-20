@@ -14,24 +14,27 @@ const ItemTable = () => {
                 return 'bg-white';
         }
     };
-
+    const styles = {
+        th: 'border border-gray-300 px-4 py-2 text-left',
+        td: 'border border-gray-300 px-4 py-2',
+    }
     return (
         <table className="min-w-full bg-white border-collapse border border-gray-300">
             <thead>
                 <tr className="bg-white">
-                    <th className="border border-gray-300 px-4 py-2 text-left">Customer Name</th>
-                    <th className="border border-gray-300 px-4 py-2 text-left">Order ID</th>
-                    <th className="border border-gray-300 px-4 py-2 text-left">Order Type</th>
-                    <th className="border border-gray-300 px-4 py-2 text-left">Order Status</th>
+                    <th className={styles['th']}>Customer Name</th>
+                    <th className={styles['th']}>Order ID</th>
+                    <th className={styles['th']}>Order Type</th>
+                    <th className={styles['th']}>Order Status</th>
                 </tr>
             </thead>
             <tbody>
-                {ORDER_DATA?.slice(0, 12).map(order => (
+                {ORDER_DATA?.slice(0, 10).map(order => (
                     <tr key={order.Order_ID} className={`${getRowColor(order.Order_Status)} hover:bg-gray-50`}>
-                        <td className="border border-gray-300 px-4 py-2">{order.Customer_Name}</td>
-                        <td className="border border-gray-300 px-4 py-2">{order.Order_ID}</td>
-                        <td className="border border-gray-300 px-4 py-2">{order.Order_Type}</td>
-                        <td className="border border-gray-300 px-4 py-2">{order.Order_Status}</td>
+                        <td className={styles['td']}>{order.Customer_Name}</td>
+                        <td className={styles['td']}>{order.Order_ID}</td>
+                        <td className={styles['td']}>{order.Order_Type}</td>
+                        <td className={styles['td']}>{order.Order_Status}</td>
                     </tr>
                 ))}
             </tbody>
