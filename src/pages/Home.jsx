@@ -5,11 +5,12 @@ import TrendingMenuCard from '../components/dashboard/TrendingMenuCard';
 import TodayChart from '../components/dashboard/TodayChart';
 import ItemPriceList from '../components/dashboard/ItemPriceList';
 import ItemTable from '../components/dashboard/ItemTable';
+import Footer from '../components/common/Footer';
 
 const Home = () => {
   const orders = ORDER_DATA;
   return (
-    <div className="container mx-auto flex flex-wrap mb-20">
+    <div className="container mx-auto flex flex-wrap mb-10">
       <div className="tile w-2/4">
         <h2 className="text-2xl font-bold my-5">Overall Details</h2>
         <OrderSummary orders={orders} />
@@ -42,6 +43,7 @@ const Home = () => {
           ))}
         </div>
       </div>
+      <Footer />
     </div>
 
   );

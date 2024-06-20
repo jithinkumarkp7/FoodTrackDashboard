@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FaAssistiveListeningSystems, FaHome, FaServicestack, FaUser } from 'react-icons/fa';
+import { FaAssistiveListeningSystems, FaHome, FaUser } from 'react-icons/fa';
 
 const Sidebar = ({ isCollapsed }) => {
   const iconSize = isCollapsed ? 23 : 20;

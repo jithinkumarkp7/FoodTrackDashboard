@@ -6,7 +6,6 @@ import './index.css';
 import Sidebar from './components/common/Sidebar';
 import Header from './components/common/Header';
 import Notification from './pages/Notification';
-import Footer from './components/common/Footer';
 import Settings from './pages/Settings';
 
 function App() {
@@ -31,7 +30,6 @@ function App() {
             </Routes>
           </div>
         </div>
-        <Footer />
       </div>
     </Router>
   );
