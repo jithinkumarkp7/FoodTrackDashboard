@@ -2,7 +2,7 @@ import React from 'react'
 
 const TrendingMenuCard = ({ title, description, imageSrc }) => {
     return (
-        <div className="bg-white rounded-lg shadow-lg overflow-hidden max-w-[340px]">
+        <div className="bg-white rounded-lg shadow-lg overflow-hidden sm:w-full md:w-1/2 lg:w-1/4 ">
             <img className="w-full h-32 object-cover" src={imageSrc} alt={title} />
             <div className="p-4">
                 <h3 className="text-xl font-semibold text-gray-800">{title}</h3>
