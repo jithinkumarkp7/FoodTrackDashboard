@@ -11,19 +11,19 @@ const Home = () => {
   const orders = ORDER_DATA;
   return (
     <div className="container mx-auto flex flex-wrap mb-10">
-      <div className="tile w-2/4">
+      <div className="tile xl:w-2/4 lg:w-full">
         <h2 className="text-2xl font-bold my-5">Overall Details</h2>
         <OrderSummary orders={orders} />
       </div>
-      <div className="tile w-2/4">
+      <div className="tile xl:w-2/4 lg:w-full">
         <h2 className="text-2xl font-bold my-5">Today's Income, Expenses, and Other</h2>
         <TodayChart />
       </div>
-      <div className="tile w-2/5">
+      <div className="tile xl:w-2/5 lg:w-full">
         <h2 className="text-2xl font-bold my-5">Price Details</h2>
         <ItemPriceList />
       </div>
-      <div className="tile w-3/5">
+      <div className="tile xl:w-3/5 lg:w-full">
         <h2 className="text-2xl font-bold my-5">Recent orders</h2>
         <div className="flex flex-wrap">
           <ItemTable order={orders} />
